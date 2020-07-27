@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react';
+import React from 'react';
 import './App.css';
 import Banner from './Components/Banner'
 import Navbar from './Components/Navbar'
@@ -8,8 +8,7 @@ import requests from './Components/request'
 function App() {
   return (
     <div className="app">
-      {/* navbar */}
-      {/* banner is here */}
+<Navbar/>
 <Banner/>
 <Row title="NETFLIX ORIGNALS"  isLargeRow  fetchUrl={requests.fetchNetflixOrignal}/>
 <Row title="Trending Now"       fetchUrl={requests.fetchTrending}/>
@@ -18,7 +17,6 @@ function App() {
 <Row title="Comedy Movies"      fetchUrl={requests.fetchComedyMovie}/>
 <Row title="Horror Movies"      fetchUrl={requests.fetchHorrorMovie}/>
 <Row title="Romance Movies"     fetchUrl={requests.fetchRomanceMovie}/>
-
 </div>
   );
 }
